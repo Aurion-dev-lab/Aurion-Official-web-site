@@ -1,78 +1,86 @@
-import { useEffect } from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 
-import Header from './components/Header.jsx'
-import Hero from './components/Hero.jsx'
-import Services from './components/Services.jsx'
-import About from './components/About.jsx'
-import Process from './components/Process.jsx'
-import Contact from './components/Contact.jsx'
-import Footer from './components/Footer.jsx'
+import Header from "./components/Header.jsx";
+import Hero from "./components/Hero.jsx";
+import Services from "./components/Services.jsx";
+import About from "./components/About.jsx";
+import Process from "./components/Process.jsx";
+import Contact from "./components/Contact.jsx";
+import Footer from "./components/Footer.jsx";
+import { useTheme } from "./context/ThemeContext.jsx";
 
 function ScrollToSection() {
-	const location = useLocation()
+  const location = useLocation();
 
-	useEffect(() => {
-		const map = {
-			'/': 'top',
-			'/services': 'services',
-			'/about': 'about',
-			'/process': 'process',
-			'/contact': 'contact',
-		}
+  useEffect(() => {
+    const map = {
+      "/": "top",
+      "/services": "services",
+      "/about": "about",
+      "/process": "process",
+      "/contact": "contact",
+    };
 
-		const id = map[location.pathname]
+    const id = map[location.pathname];
 
-		if (id === 'top') {
-			window.scrollTo({ top: 0, behavior: 'smooth' })
-			return
-		}
+    if (id === "top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
 
-		if (id) {
-			const el = document.getElementById(id)
-			el?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-		}
-	}, [location.pathname])
+    if (id) {
+      const el = document.getElementById(id);
+      el?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [location.pathname]);
 
-	return null
+  return null;
 }
 
 function App() {
-	return (
-		<div className="min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(255,76,37,0.2),transparent_45%),radial-gradient(circle_at_80%_20%,rgba(255,122,64,0.15),transparent_40%),#0a0504] text-text">
-			<ScrollToSection />
+  const { theme } = useTheme();
+  return (
+    <div
+      className={
+        theme === "dark"
+          ? "min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(255,76,37,0.2),transparent_45%),radial-gradient(circle_at_80%_20%,rgba(255,122,64,0.15),transparent_40%),#0a0504] text-text"
+          : "min-h-screen overflow-hidden bg-white text-gray-900"
+      }
+    >
+      <ScrollToSection />
 
-			<Header />
+      <Header />
 
-			{/* Dummy routes ONLY for URL */}
-			<Routes>
-				<Route path="/" element={null} />
-				<Route path="/services" element={null} />
-				<Route path="/about" element={null} />
-				<Route path="/process" element={null} />
-				<Route path="/contact" element={null} />
-			</Routes>
+      {/* Dummy routes ONLY for URL */}
+      <Routes>
+        <Route path="/" element={null} />
+        <Route path="/services" element={null} />
+        <Route path="/about" element={null} />
+        <Route path="/process" element={null} />
+        <Route path="/contact" element={null} />
+      </Routes>
 
-			<main id="main">
-				<section id="top">
-					<Hero />
-				</section>
+      <main id="main">
+        <section id="top">
+          <Hero />
+        </section>
 
-				<section id="services">
-					<Services />
-				</section>
+        <section id="services">
+          <Services />
+        </section>
 
-				<About />
-				<Process />
+        <About />
+        <Process />
 
-				<section id="contact">
-					<Contact />
-				</section>
-			</main>
+        <section id="contact">
+          <Contact />
+        </section>
+      </main>
 
-			<Footer />
-		</div>
-	)
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
