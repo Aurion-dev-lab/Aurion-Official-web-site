@@ -19,7 +19,7 @@ function Contact() {
 							<div>
 								<p className="text-[0.7rem] uppercase tracking-[0.2em] text-muted">Phone</p>
 								<p>+94 76 972 6890</p>
-								<p>0760 950 718</p>
+								<p>+94 76 095 0718</p>
 							</div>
 							<div>
 								<p className="text-[0.7rem] uppercase tracking-[0.2em] text-muted">HQ</p>

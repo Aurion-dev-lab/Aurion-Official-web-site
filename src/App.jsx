@@ -1,9 +1,36 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import Services from './components/Services.jsx'
 import Contact from './components/Contact.jsx'
 
 function App() {
+	const location = useLocation()
+
+	useEffect(() => {
+		const idByPath = {
+			'/services': 'services',
+			'/about': 'about',
+			'/process': 'process',
+			'/contact': 'contact',
+		}
+
+		if (location.pathname === '/') {
+			window.scrollTo({ top: 0, behavior: 'smooth' })
+			return
+		}
+
+		const targetId = idByPath[location.pathname]
+		if (targetId) {
+			const target = document.getElementById(targetId)
+			if (target) {
+				target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+			}
+		}
+	}, [location.pathname])
+
 	return (
 		<div className="min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(255,76,37,0.2),transparent_45%),radial-gradient(circle_at_80%_20%,rgba(255,122,64,0.15),transparent_40%),#0a0504] text-text">
 			<a
