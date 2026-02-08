@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import logo from '../assets/logo2.png'
 
 function Header() {
@@ -14,22 +13,22 @@ function Header() {
 					<span className="text-[1.1rem]">Aurion</span>
 				</div>
 				<nav className="hidden items-center gap-6 text-muted md:flex" aria-label="Primary">
-					<Link to="/services" className="transition hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/60">
+					<a href="#services" className="transition hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/60">
 						Services
-					</Link>
-					<Link to="/about" className="transition hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/60">
+					</a>
+					<a href="#about" className="transition hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/60">
 						About
-					</Link>
-					<Link to="/process" className="transition hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/60">
+					</a>
+					<a href="#process" className="transition hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/60">
 						Process
-					</Link>
+					</a>
 				</nav>
-				<Link
+				<a
 					className="rounded-full bg-gradient-to-r from-accent to-accent-bright px-6 py-3 text-sm font-semibold text-[#0c0605] shadow-ember transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/70 focus-visible:ring-offset-2 focus-visible:ring-offset-base"
-					to="/contact"
+					href="#contact"
 				>
 					Request Demo
-				</Link>
+				</a>
 			</div>
 		</header>
 	)
