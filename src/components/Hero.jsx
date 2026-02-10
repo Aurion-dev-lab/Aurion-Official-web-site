@@ -13,7 +13,7 @@ function Hero() {
 			</div>
 			<div className="mx-auto grid max-w-6xl items-center gap-12 px-7 lg:grid-cols-2">
 				<div className="flex flex-col gap-5">
-					<div className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.2em] text-muted">
+					<div className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.2em] text-gray-600 dark:text-muted">
 						
 						<span>Say hello to</span>
 					</div>
@@ -23,39 +23,39 @@ function Hero() {
 					<p className="max-w-[560px] text-2xl font-semibold">
 						AURION is your trusted partner in scalable IT solutions — built to engineer tomorrow, today.
 					</p>
-					<p className="max-w-[560px] text-base font-medium text-muted">
+					<p className="max-w-[560px] text-base font-medium text-gray-600 dark:text-muted">
 						This is the beginning of our journey, and we are ready to build, innovate, and grow together.
 					</p>
 					<div className="flex flex-wrap gap-4">
 						<a
-							className="rounded-full bg-gradient-to-r from-accent to-accent-bright px-6 py-3 text-sm font-semibold text-[#0c0605] shadow-ember transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/70 focus-visible:ring-offset-2 focus-visible:ring-offset-base"
+							className="rounded-full bg-gradient-to-r from-accent to-accent-bright px-6 py-3 text-sm font-semibold text-white dark:text-[#0c0605] shadow-[0_8px_24px_rgba(255,76,37,0.15)] dark:shadow-ember transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-base"
 							href="#contact"
 						>
 							Request Demo
 						</a>
 						<a
-							className="rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-text/90 transition hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/60 focus-visible:ring-offset-2 focus-visible:ring-offset-base"
+							className="rounded-full border border-gray-300 dark:border-white/20 bg-gray-100 dark:bg-white/5 px-6 py-3 text-sm font-semibold text-gray-900 dark:text-text/90 transition hover:text-gray-900 dark:hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-base"
 							href="#services"
 						>
 							View Services
 						</a>
 					</div>
 					<div className="grid gap-3 sm:grid-cols-3">
-						<div className="rounded-2xl border border-white/10 bg-card/70 p-3">
-							<p className="text-xs uppercase tracking-[0.2em] text-muted">Onboarding</p>
-							<p className="mt-1 font-display text-lg">14 days</p>
+						<div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card/70 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-none p-3">
+							<p className="text-xs uppercase tracking-[0.2em] text-gray-600 dark:text-muted">Onboarding</p>
+							<p className="mt-1 font-display text-lg text-gray-900 dark:text-text">14 days</p>
 						</div>
-						<div className="rounded-2xl border border-white/10 bg-card/70 p-3">
-							<p className="text-xs uppercase tracking-[0.2em] text-muted">Response</p>
-							<p className="mt-1 font-display text-lg">&lt; 5 minutes</p>
+						<div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card/70 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-none p-3">
+							<p className="text-xs uppercase tracking-[0.2em] text-gray-600 dark:text-muted">Response</p>
+							<p className="mt-1 font-display text-lg text-gray-900 dark:text-text">&lt; 5 minutes</p>
 						</div>
-						<div className="rounded-2xl border border-white/10 bg-card/70 p-3">
-							<p className="text-xs uppercase tracking-[0.2em] text-muted">Coverage</p>
-							<p className="mt-1 font-display text-lg">24/7 global</p>
+						<div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card/70 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-none p-3">
+							<p className="text-xs uppercase tracking-[0.2em] text-gray-600 dark:text-muted">Coverage</p>
+							<p className="mt-1 font-display text-lg text-gray-900 dark:text-text">24/7 global</p>
 						</div>
 					</div>
-					<div className="rounded-2xl border border-white/10 bg-surface/80 p-4 text-sm text-muted">
-						<p className="font-semibold text-text">Thank you to everyone who believed in us.</p>
+					<div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-surface/80 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-none p-4 text-sm text-gray-600 dark:text-muted">
+						<p className="font-semibold text-gray-900 dark:text-text">Thank you to everyone who believed in us.</p>
 						<p className="mt-2">Let us build the future.</p>
 					</div>
 				</div>
