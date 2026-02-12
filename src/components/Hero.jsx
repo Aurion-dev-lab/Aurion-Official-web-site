@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import photo from '../assets/photo.png'
 
 function Hero() {
@@ -27,18 +29,18 @@ function Hero() {
 						This is the beginning of our journey, and we are ready to build, innovate, and grow together.
 					</p>
 					<div className="flex flex-wrap gap-4">
-						<a
-							className="rounded-full bg-gradient-to-r from-accent to-accent-bright px-6 py-3 text-sm font-semibold text-white dark:text-[#0c0605] shadow-[0_8px_24px_rgba(255,76,37,0.15)] dark:shadow-ember transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-base"
-							href="#contact"
+						<Link
+							className="rounded-full bg-gradient-to-r from-accent to-accent-bright px-6 py-3 text-sm font-semibold text-[#0c0605] shadow-ember transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/70 focus-visible:ring-offset-2 focus-visible:ring-offset-base"
+							to="/contact"
 						>
 							Request Demo
-						</a>
-						<a
-							className="rounded-full border border-gray-300 dark:border-white/20 bg-gray-100 dark:bg-white/5 px-6 py-3 text-sm font-semibold text-gray-900 dark:text-text/90 transition hover:text-gray-900 dark:hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-base"
-							href="#services"
+						</Link>
+						<Link
+							className="rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-text/90 transition hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/60 focus-visible:ring-offset-2 focus-visible:ring-offset-base"
+							to="/services"
 						>
 							View Services
-						</a>
+						</Link>
 					</div>
 					<div className="grid gap-3 sm:grid-cols-3">
 						<div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card/70 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-none p-3">

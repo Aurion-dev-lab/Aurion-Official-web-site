@@ -22,9 +22,6 @@ function Services() {
 							Custom software built for scale, security, and long-term maintainability.
 						</p>
 						<span className="text-xs uppercase tracking-[0.08em] text-accent-bright">Web • API • ERP</span>
-						<button className="mt-4 text-sm font-semibold text-accent-bright transition hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/60">
-							Learn more
-						</button>
 					</article>
 					<article className="relative rounded-2xl border border-accent-bright/40 bg-white dark:bg-card p-6 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-card transition hover:-translate-y-1.5">
 						<span className="absolute right-4 top-4 rounded-full bg-accent-bright px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-white dark:text-[#0c0605]">
@@ -35,9 +32,6 @@ function Services() {
 							Launch subscription-ready products with billing, analytics, and multi-tenant design.
 						</p>
 						<span className="text-xs uppercase tracking-[0.08em] text-accent-bright">MVP • Growth • Scale</span>
-						<button className="mt-4 text-sm font-semibold text-accent-bright transition hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/60">
-							Learn more
-						</button>
 					</article>
 					<article className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card p-6 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-card transition hover:-translate-y-1.5 hover:border-accent-bright/40">
 						<h3 className="mb-2 font-display text-lg text-gray-900 dark:text-text">Mobile apps</h3>
@@ -45,9 +39,6 @@ function Services() {
 							iOS and Android experiences with sleek UI and reliable performance.
 						</p>
 						<span className="text-xs uppercase tracking-[0.08em] text-accent-bright">React Native • Flutter</span>
-						<button className="mt-4 text-sm font-semibold text-accent-bright transition hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/60">
-							Learn more
-						</button>
 					</article>
 					<article className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card p-6 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-card transition hover:-translate-y-1.5 hover:border-accent-bright/40">
 						<h3 className="mb-2 font-display text-lg text-gray-900 dark:text-text">Cloud engineering</h3>
@@ -55,9 +46,6 @@ function Services() {
 							Architecture, migration, and optimization on modern cloud stacks.
 						</p>
 						<span className="text-xs uppercase tracking-[0.08em] text-accent-bright">AWS • Azure • GCP</span>
-						<button className="mt-4 text-sm font-semibold text-accent-bright transition hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/60">
-							Learn more
-						</button>
 					</article>
 					<article className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card p-6 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-card transition hover:-translate-y-1.5 hover:border-accent-bright/40">
 						<h3 className="mb-2 font-display text-lg text-gray-900 dark:text-text">Machine learning</h3>
@@ -65,9 +53,6 @@ function Services() {
 							ML models, data pipelines, and production-grade MLOps delivery.
 						</p>
 						<span className="text-xs uppercase tracking-[0.08em] text-accent-bright">NLP • Vision • MLOps</span>
-						<button className="mt-4 text-sm font-semibold text-accent-bright transition hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/60">
-							Learn more
-						</button>
 					</article>
 					<article className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card p-6 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-card transition hover:-translate-y-1.5 hover:border-accent-bright/40">
 						<h3 className="mb-2 font-display text-lg text-gray-900 dark:text-text">Product strategy</h3>
@@ -75,9 +60,6 @@ function Services() {
 							From discovery to roadmap, we align product vision with engineering delivery.
 						</p>
 						<span className="text-xs uppercase tracking-[0.08em] text-accent-bright">Research • UX • KPI</span>
-						<button className="mt-4 text-sm font-semibold text-accent-bright transition hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/60">
-							Learn more
-						</button>
 					</article>
 				</div>
 			</div>
