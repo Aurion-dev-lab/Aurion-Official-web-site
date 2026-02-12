@@ -15,7 +15,7 @@ function Hero() {
 			</div>
 			<div className="mx-auto grid max-w-6xl items-center gap-12 px-7 lg:grid-cols-2">
 				<div className="flex flex-col gap-5">
-					<div className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.2em] text-muted">
+					<div className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.2em] text-gray-600 dark:text-muted">
 						
 						<span>Say hello to</span>
 					</div>
@@ -25,7 +25,7 @@ function Hero() {
 					<p className="max-w-[560px] text-2xl font-semibold">
 						AURION is your trusted partner in scalable IT solutions — built to engineer tomorrow, today.
 					</p>
-					<p className="max-w-[560px] text-base font-medium text-muted">
+					<p className="max-w-[560px] text-base font-medium text-gray-600 dark:text-muted">
 						This is the beginning of our journey, and we are ready to build, innovate, and grow together.
 					</p>
 					<div className="flex flex-wrap gap-4">
@@ -43,21 +43,21 @@ function Hero() {
 						</Link>
 					</div>
 					<div className="grid gap-3 sm:grid-cols-3">
-						<div className="rounded-2xl border border-white/10 bg-card/70 p-3">
-							<p className="text-xs uppercase tracking-[0.2em] text-muted">Onboarding</p>
-							<p className="mt-1 font-display text-lg">14 days</p>
+						<div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card/70 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-none p-3">
+							<p className="text-xs uppercase tracking-[0.2em] text-gray-600 dark:text-muted">Onboarding</p>
+							<p className="mt-1 font-display text-lg text-gray-900 dark:text-text">14 days</p>
 						</div>
-						<div className="rounded-2xl border border-white/10 bg-card/70 p-3">
-							<p className="text-xs uppercase tracking-[0.2em] text-muted">Response</p>
-							<p className="mt-1 font-display text-lg">&lt; 5 minutes</p>
+						<div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card/70 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-none p-3">
+							<p className="text-xs uppercase tracking-[0.2em] text-gray-600 dark:text-muted">Response</p>
+							<p className="mt-1 font-display text-lg text-gray-900 dark:text-text">&lt; 5 minutes</p>
 						</div>
-						<div className="rounded-2xl border border-white/10 bg-card/70 p-3">
-							<p className="text-xs uppercase tracking-[0.2em] text-muted">Coverage</p>
-							<p className="mt-1 font-display text-lg">24/7 global</p>
+						<div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card/70 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-none p-3">
+							<p className="text-xs uppercase tracking-[0.2em] text-gray-600 dark:text-muted">Coverage</p>
+							<p className="mt-1 font-display text-lg text-gray-900 dark:text-text">24/7 global</p>
 						</div>
 					</div>
-					<div className="rounded-2xl border border-white/10 bg-surface/80 p-4 text-sm text-muted">
-						<p className="font-semibold text-text">Thank you to everyone who believed in us.</p>
+					<div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-surface/80 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-none p-4 text-sm text-gray-600 dark:text-muted">
+						<p className="font-semibold text-gray-900 dark:text-text">Thank you to everyone who believed in us.</p>
 						<p className="mt-2">Let us build the future.</p>
 					</div>
 				</div>
