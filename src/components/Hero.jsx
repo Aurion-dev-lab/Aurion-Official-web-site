@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import photo from '../assets/photo.png'
 
 function Hero() {
@@ -27,18 +29,18 @@ function Hero() {
 						This is the beginning of our journey, and we are ready to build, innovate, and grow together.
 					</p>
 					<div className="flex flex-wrap gap-4">
-						<a
+						<Link
 							className="rounded-full bg-gradient-to-r from-accent to-accent-bright px-6 py-3 text-sm font-semibold text-[#0c0605] shadow-ember transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/70 focus-visible:ring-offset-2 focus-visible:ring-offset-base"
-							href="#contact"
+							to="/contact"
 						>
 							Request Demo
-						</a>
-						<a
+						</Link>
+						<Link
 							className="rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-text/90 transition hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/60 focus-visible:ring-offset-2 focus-visible:ring-offset-base"
-							href="#services"
+							to="/services"
 						>
 							View Services
-						</a>
+						</Link>
 					</div>
 					<div className="grid gap-3 sm:grid-cols-3">
 						<div className="rounded-2xl border border-white/10 bg-card/70 p-3">
