@@ -1,3 +1,5 @@
+// This form uses FormSubmit (https://formsubmit.co) for submissions.
+// Replace 'your@email.com' in the action URL with your actual email address to receive form responses.
 function Contact() {
 	return (
 		<section id="contact" className="py-20">
@@ -27,11 +29,17 @@ function Contact() {
 							</div>
 						</div>
 					</div>
-					<form className="grid gap-4" aria-label="Demo request">
+					<form
+						className="grid gap-4"
+						aria-label="Demo request"
+						action="https://formsubmit.co/AurionIT@outlook.com"
+						method="POST"
+					>
 						<label className="grid gap-2 text-sm text-muted">
 							Full name
 							<input
 								type="text"
+								name="name"
 								placeholder="Jane Doe"
 								required
 								className="rounded-xl border border-white/10 bg-[#0f0807] px-4 py-3 text-text placeholder:text-muted/70 focus:border-accent-bright/60 focus:outline-none focus:ring-2 focus:ring-accent-bright/15"
@@ -41,6 +49,7 @@ function Contact() {
 							Work email
 							<input
 								type="email"
+								name="email"
 								placeholder="jane@company.com"
 								required
 								className="rounded-xl border border-white/10 bg-[#0f0807] px-4 py-3 text-text placeholder:text-muted/70 focus:border-accent-bright/60 focus:outline-none focus:ring-2 focus:ring-accent-bright/15"
@@ -48,7 +57,10 @@ function Contact() {
 						</label>
 						<label className="grid gap-2 text-sm text-muted">
 							Company size
-							<select className="rounded-xl border border-white/10 bg-[#0f0807] px-4 py-3 text-text focus:border-accent-bright/60 focus:outline-none focus:ring-2 focus:ring-accent-bright/15">
+							<select
+								name="company_size"
+								className="rounded-xl border border-white/10 bg-[#0f0807] px-4 py-3 text-text focus:border-accent-bright/60 focus:outline-none focus:ring-2 focus:ring-accent-bright/15"
+							>
 								<option>1-25</option>
 								<option>26-100</option>
 								<option>101-500</option>
@@ -58,6 +70,7 @@ function Contact() {
 						<label className="grid gap-2 text-sm text-muted">
 							Project goals
 							<textarea
+								name="project_goals"
 								placeholder="Tell us what you want to improve"
 								rows="4"
 								className="rounded-xl border border-white/10 bg-[#0f0807] px-4 py-3 text-text placeholder:text-muted/70 focus:border-accent-bright/60 focus:outline-none focus:ring-2 focus:ring-accent-bright/15"

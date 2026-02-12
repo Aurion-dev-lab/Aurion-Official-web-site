@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 
 import Header from './components/Header.jsx'
@@ -12,7 +12,7 @@ import Footer from './components/Footer.jsx'
 function ScrollToSection() {
 	const location = useLocation()
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		const map = {
 			'/': 'top',
 			'/services': 'services',
@@ -21,7 +21,8 @@ function ScrollToSection() {
 			'/contact': 'contact',
 		}
 
-		const id = map[location.pathname]
+		const normalizedPath = location.pathname.replace(/\/$/, '') || '/'
+		const id = map[normalizedPath]
 
 		if (id === 'top') {
 			window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -29,8 +30,26 @@ function ScrollToSection() {
 		}
 
 		if (id) {
-			const el = document.getElementById(id)
-			el?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+			let cancelled = false
+			let timerId
+
+			const scrollToTarget = (attempt = 0) => {
+				if (cancelled) return
+				const el = document.getElementById(id)
+				if (el) {
+					el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+					return
+				}
+				if (attempt < 6) {
+					timerId = setTimeout(() => scrollToTarget(attempt + 1), 80)
+				}
+			}
+
+			requestAnimationFrame(() => scrollToTarget(0))
+			return () => {
+				cancelled = true
+				if (timerId) clearTimeout(timerId)
+			}
 		}
 	}, [location.pathname])
 
@@ -54,20 +73,11 @@ function App() {
 			</Routes>
 
 			<main id="main">
-				<section id="top">
-					<Hero />
-				</section>
-
-				<section id="services">
-					<Services />
-				</section>
-
+				<Hero />
+				<Services />
 				<About />
 				<Process />
-
-				<section id="contact">
-					<Contact />
-				</section>
+				<Contact />
 			</main>
 
 			<Footer />
