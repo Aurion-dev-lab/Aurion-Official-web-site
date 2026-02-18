@@ -18,49 +18,49 @@ function Process() {
           </p>
         </div>
         <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          <div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-none p-5">
-            <span className="mb-2 block font-display font-bold text-accent-bright">
+          <div className="rounded-2xl bg-white/50 dark:bg-card/40 p-5 shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10 backdrop-blur-sm transition hover:bg-white dark:hover:bg-card/60">
+            <span className="mb-2 block font-display font-bold text-accent-bright text-xl">
               01
             </span>
-            <h3 className="mb-2 font-display text-lg text-gray-900 dark:text-text">
+            <h3 className="mb-2 font-display text-lg font-semibold text-gray-900 dark:text-text">
               Discovery & risk audit
             </h3>
-            <p className="text-gray-600 dark:text-muted">
+            <p className="text-sm text-gray-600 dark:text-muted">
               Map your stack, surface bottlenecks, and align on the business
               goals.
             </p>
           </div>
-          <div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-none p-5">
-            <span className="mb-2 block font-display font-bold text-accent-bright">
+          <div className="rounded-2xl bg-white/50 dark:bg-card/40 p-5 shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10 backdrop-blur-sm transition hover:bg-white dark:hover:bg-card/60">
+            <span className="mb-2 block font-display font-bold text-accent-bright text-xl">
               02
             </span>
-            <h3 className="mb-2 font-display text-lg text-gray-900 dark:text-text">
+            <h3 className="mb-2 font-display text-lg font-semibold text-gray-900 dark:text-text">
               Blueprint & roadmap
             </h3>
-            <p className="text-gray-600 dark:text-muted">
+            <p className="text-sm text-gray-600 dark:text-muted">
               Create a phased architecture with security, cost, and performance
               KPIs.
             </p>
           </div>
-          <div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-none p-5">
-            <span className="mb-2 block font-display font-bold text-accent-bright">
+          <div className="rounded-2xl bg-white/50 dark:bg-card/40 p-5 shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10 backdrop-blur-sm transition hover:bg-white dark:hover:bg-card/60">
+            <span className="mb-2 block font-display font-bold text-accent-bright text-xl">
               03
             </span>
-            <h3 className="mb-2 font-display text-lg text-gray-900 dark:text-text">
+            <h3 className="mb-2 font-display text-lg font-semibold text-gray-900 dark:text-text">
               Build & automate
             </h3>
-            <p className="text-gray-600 dark:text-muted">
+            <p className="text-sm text-gray-600 dark:text-muted">
               Implement cloud foundations, CI/CD, and AI-driven operations.
             </p>
           </div>
-          <div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-none p-5">
-            <span className="mb-2 block font-display font-bold text-accent-bright">
+          <div className="rounded-2xl bg-white/50 dark:bg-card/40 p-5 shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10 backdrop-blur-sm transition hover:bg-white dark:hover:bg-card/60">
+            <span className="mb-2 block font-display font-bold text-accent-bright text-xl">
               04
             </span>
-            <h3 className="mb-2 font-display text-lg text-gray-900 dark:text-text">
+            <h3 className="mb-2 font-display text-lg font-semibold text-gray-900 dark:text-text">
               Operate & evolve
             </h3>
-            <p className="text-gray-600 dark:text-muted">
+            <p className="text-sm text-gray-600 dark:text-muted">
               Continuous monitoring, incident response, and optimization cycles.
             </p>
           </div>

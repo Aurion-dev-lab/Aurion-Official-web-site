@@ -16,50 +16,47 @@ function Services() {
 					</p>
 				</div>
 				<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-					<article className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card p-6 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-card transition hover:-translate-y-1.5 hover:border-accent-bright/40">
-						<h3 className="mb-2 font-display text-lg text-gray-900 dark:text-text">Software development</h3>
-						<p className="mb-3 text-gray-600 dark:text-muted">
-							Custom software built for scale, security, and long-term maintainability.
+					<article className="rounded-2xl bg-white/50 dark:bg-card/40 p-6 shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10 backdrop-blur-sm transition hover:-translate-y-1.5 hover:bg-white dark:hover:bg-card/60">
+						<h3 className="mb-2 font-display text-lg font-semibold text-gray-900 dark:text-text">Full-Stack Web</h3>
+						<p className="mb-3 text-sm text-gray-600 dark:text-muted">
+							Enterprise-grade APIs, secure dashboards, and managed deployments.
 						</p>
-						<span className="text-xs uppercase tracking-[0.08em] text-accent-bright">Web • API • ERP</span>
 					</article>
-					<article className="relative rounded-2xl border border-accent-bright/40 bg-white dark:bg-card p-6 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-card transition hover:-translate-y-1.5">
-						<span className="absolute right-4 top-4 rounded-full bg-accent-bright px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-white dark:text-[#0c0605]">
-							Most popular
-						</span>
-						<h3 className="mb-2 font-display text-lg text-gray-900 dark:text-text">SaaS platforms</h3>
-						<p className="mb-3 text-gray-600 dark:text-muted">
-							Launch subscription-ready products with billing, analytics, and multi-tenant design.
+					<article className="rounded-2xl bg-white/50 dark:bg-card/40 p-6 shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10 backdrop-blur-sm transition hover:-translate-y-1.5 hover:bg-white dark:hover:bg-card/60">
+						<h3 className="mb-2 font-display text-lg font-semibold text-gray-900 dark:text-text">Mobile Apps</h3>
+						<p className="mb-3 text-sm text-gray-600 dark:text-muted">
+							Expert Flutter & native development consulting, offline-first strategies.
 						</p>
-						<span className="text-xs uppercase tracking-[0.08em] text-accent-bright">MVP • Growth • Scale</span>
 					</article>
-					<article className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card p-6 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-card transition hover:-translate-y-1.5 hover:border-accent-bright/40">
-						<h3 className="mb-2 font-display text-lg text-gray-900 dark:text-text">Mobile apps</h3>
-						<p className="mb-3 text-gray-600 dark:text-muted">
-							iOS and Android experiences with sleek UI and reliable performance.
+					<article className="rounded-2xl bg-white/50 dark:bg-card/40 p-6 shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10 backdrop-blur-sm transition hover:-translate-y-1.5 hover:bg-white dark:hover:bg-card/60">
+						<h3 className="mb-2 font-display text-lg font-semibold text-gray-900 dark:text-text">DevOps & Cloud</h3>
+						<p className="mb-3 text-sm text-gray-600 dark:text-muted">
+							Streamlined DevOps, Docker containerization, and automated CI/CD pipelines.
 						</p>
-						<span className="text-xs uppercase tracking-[0.08em] text-accent-bright">React Native • Flutter</span>
 					</article>
-					<article className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card p-6 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-card transition hover:-translate-y-1.5 hover:border-accent-bright/40">
-						<h3 className="mb-2 font-display text-lg text-gray-900 dark:text-text">Cloud engineering</h3>
-						<p className="mb-3 text-gray-600 dark:text-muted">
-							Architecture, migration, and optimization on modern cloud stacks.
+					<article className="rounded-2xl bg-white/50 dark:bg-card/40 p-6 shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10 backdrop-blur-sm transition hover:-translate-y-1.5 hover:bg-white dark:hover:bg-card/60">
+						<h3 className="mb-2 font-display text-lg font-semibold text-gray-900 dark:text-text">UI/UX Design</h3>
+						<p className="mb-3 text-sm text-gray-600 dark:text-muted">
+							User-centric wireframing, high-fidelity UI design, and seamless handoff.
 						</p>
-						<span className="text-xs uppercase tracking-[0.08em] text-accent-bright">AWS • Azure • GCP</span>
 					</article>
-					<article className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card p-6 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-card transition hover:-translate-y-1.5 hover:border-accent-bright/40">
-						<h3 className="mb-2 font-display text-lg text-gray-900 dark:text-text">Machine learning</h3>
-						<p className="mb-3 text-gray-600 dark:text-muted">
-							ML models, data pipelines, and production-grade MLOps delivery.
+					<article className="rounded-2xl bg-white/50 dark:bg-card/40 p-6 shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10 backdrop-blur-sm transition hover:-translate-y-1.5 hover:bg-white dark:hover:bg-card/60">
+						<h3 className="mb-2 font-display text-lg font-semibold text-gray-900 dark:text-text">Project Consulting</h3>
+						<p className="mb-3 text-sm text-gray-600 dark:text-muted">
+							Strategic scoping, risk assessment, and expert delivery oversight.
 						</p>
-						<span className="text-xs uppercase tracking-[0.08em] text-accent-bright">NLP • Vision • MLOps</span>
 					</article>
-					<article className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-card p-6 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-card transition hover:-translate-y-1.5 hover:border-accent-bright/40">
-						<h3 className="mb-2 font-display text-lg text-gray-900 dark:text-text">Product strategy</h3>
-						<p className="mb-3 text-gray-600 dark:text-muted">
-							From discovery to roadmap, we align product vision with engineering delivery.
+					<article className="rounded-2xl bg-white/50 dark:bg-card/40 p-6 shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10 backdrop-blur-sm transition hover:-translate-y-1.5 hover:bg-white dark:hover:bg-card/60">
+						<h3 className="mb-2 font-display text-lg font-semibold text-gray-900 dark:text-text">Machine Learning</h3>
+						<p className="mb-3 text-sm text-gray-600 dark:text-muted">
+							Advanced ML modeling, robust data pipelines, and predictive analytics services.
 						</p>
-						<span className="text-xs uppercase tracking-[0.08em] text-accent-bright">Research • UX • KPI</span>
+					</article>
+					<article className="rounded-2xl bg-white/50 dark:bg-card/40 p-6 shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10 backdrop-blur-sm transition hover:-translate-y-1.5 hover:bg-white dark:hover:bg-card/60">
+						<h3 className="mb-2 font-display text-lg font-semibold text-gray-900 dark:text-text">Portfolio Websites</h3>
+						<p className="mb-3 text-sm text-gray-600 dark:text-muted">
+							Professional branding, creative portfolios, and digital presence services.
+						</p>
 					</article>
 				</div>
 			</div>

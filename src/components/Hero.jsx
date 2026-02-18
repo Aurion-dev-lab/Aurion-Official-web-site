@@ -16,17 +16,17 @@ function Hero() {
 			<div className="mx-auto grid max-w-6xl items-center gap-12 px-7 lg:grid-cols-2">
 				<div className="flex flex-col gap-5">
 					<div className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.2em] text-gray-600 dark:text-muted">
-						
+
 						<span>Say hello to</span>
 					</div>
 					<h1 className="font-display text-[clamp(3.2rem,7vw,6.8rem)] font-bold tracking-[0.08em] leading-tight">
 						AURION
 					</h1>
 					<p className="max-w-[560px] text-2xl font-semibold">
-						AURION is your trusted partner in scalable IT solutions — built to engineer tomorrow, today.
+						AURION is your trusted partner in scalable IT solutions — empowering tomorrow, today.
 					</p>
 					<p className="max-w-[560px] text-base font-medium text-gray-600 dark:text-muted">
-						This is the beginning of our journey, and we are ready to build, innovate, and grow together.
+						This is the beginning of our partnership, and we are ready to collaborate, innovate, and grow together.
 					</p>
 					<div className="flex flex-wrap gap-4">
 						<Link
@@ -58,7 +58,7 @@ function Hero() {
 					</div>
 					<div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-surface/80 shadow-[0_4px_12px_rgba(0,0,0,0.08)] dark:shadow-none p-4 text-sm text-gray-600 dark:text-muted">
 						<p className="font-semibold text-gray-900 dark:text-text">Thank you to everyone who believed in us.</p>
-						<p className="mt-2">Let us build the future.</p>
+						<p className="mt-2">Let us empower your future.</p>
 					</div>
 				</div>
 
