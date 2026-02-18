@@ -36,7 +36,7 @@ function Hero() {
 							Request Demo
 						</Link>
 						<Link
-							className="rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-text/90 transition hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/60 focus-visible:ring-offset-2 focus-visible:ring-offset-base"
+							className="rounded-full border border-gray-300 dark:border-white/20 bg-white/50 dark:bg-white/5 px-6 py-3 text-sm font-semibold text-gray-900 dark:text-text/90 transition hover:bg-white dark:hover:bg-white/10 hover:text-gray-900 dark:hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/60 focus-visible:ring-offset-2 focus-visible:ring-offset-base"
 							to="/services"
 						>
 							View Services

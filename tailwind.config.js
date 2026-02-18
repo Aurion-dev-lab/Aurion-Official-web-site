@@ -16,6 +16,7 @@ export default {
       },
       backgroundImage: {
         'dark-gradient': 'radial-gradient(circle at top left, rgba(255,76,37,0.2), transparent 45%), radial-gradient(circle at 80% 20%, rgba(255,122,64,0.15), transparent 40%), linear-gradient(to bottom, #0a0504, #0a0504)',
+        'base-gradient': 'radial-gradient(circle at top left, rgba(255,76,37,0.25), transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,122,64,0.2), transparent 40%), #0a0504',
       },
       fontFamily: {
         sans: ['Manrope', 'sans-serif'],
