@@ -4,14 +4,9 @@ import photo from '../assets/photo.png'
 
 function Hero() {
 	return (
-		<section className="relative py-20" id="top">
-			<div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-				<div className="absolute -left-24 top-10 h-72 w-72 animate-flicker rounded-full bg-[radial-gradient(circle,rgba(255,106,61,0.65),rgba(255,76,37,0.1)_60%,transparent_70%)] blur-2xl" />
-				<div className="absolute left-1/3 top-28 h-56 w-56 animate-flicker rounded-full bg-[radial-gradient(circle,rgba(255,122,64,0.5),rgba(255,76,37,0.08)_60%,transparent_70%)] blur-2xl" style={{ animationDelay: '-1s' }} />
-				<div className="absolute right-16 top-4 h-72 w-72 animate-flicker rounded-full bg-[radial-gradient(circle,rgba(255,76,37,0.55),rgba(255,122,64,0.1)_60%,transparent_70%)] blur-3xl" style={{ animationDelay: '-2s' }} />
-				<div className="absolute bottom-10 left-20 h-10 w-10 animate-rise rounded-full bg-[radial-gradient(circle,rgba(255,204,170,0.6),rgba(255,76,37,0.2)_65%,transparent_70%)]" />
-				<div className="absolute bottom-2 left-1/2 h-12 w-12 animate-rise rounded-full bg-[radial-gradient(circle,rgba(255,170,120,0.6),rgba(255,76,37,0.18)_65%,transparent_70%)]" style={{ animationDelay: '-1.5s' }} />
-				<div className="absolute bottom-6 right-24 h-8 w-8 animate-rise rounded-full bg-[radial-gradient(circle,rgba(255,220,180,0.5),rgba(255,76,37,0.16)_65%,transparent_70%)]" style={{ animationDelay: '-2.5s' }} />
+		<section className="relative py-20 bg-white dark:bg-[#120909]" id="top">
+			{/* Glowing background and circles for warm effect */}
+			<div className="pointer-events-none absolute inset-0 overflow-hidden z-0" aria-hidden="true">
 			</div>
 			<div className="mx-auto grid max-w-6xl items-center gap-12 px-7 lg:grid-cols-2">
 				<div className="flex flex-col gap-5">
@@ -30,7 +25,7 @@ function Hero() {
 					</p>
 					<div className="flex flex-wrap gap-4">
 						<Link
-							className="rounded-full bg-gradient-to-r from-accent to-accent-bright px-6 py-3 text-sm font-semibold text-[#0c0605] shadow-ember transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/70 focus-visible:ring-offset-2 focus-visible:ring-offset-base"
+							className="rounded-full bg-gradient-to-r from-accent to-accent-bright px-6 py-3 text-sm font-semibold text-[#0c0605] transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/70 focus-visible:ring-offset-2 focus-visible:ring-offset-base"
 							to="/contact"
 						>
 							Request Demo
@@ -63,10 +58,7 @@ function Hero() {
 				</div>
 
 				<div className="relative grid min-h-[360px] place-items-center">
-					<div
-						className="absolute h-[260px] w-[260px] animate-pulse bg-[radial-gradient(circle,rgba(255,76,37,0.4),transparent_70%)] blur"
-						aria-hidden="true"
-					/>
+
 					<img
 						src={photo}
 						alt="Aurion emblem"

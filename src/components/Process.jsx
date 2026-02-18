@@ -2,7 +2,7 @@ function Process() {
   return (
     <section
       id="process"
-      className="py-20 bg-gradient-to-b from-transparent to-orange-50/30 dark:bg-[radial-gradient(circle_at_center,rgba(255,76,37,0.12),transparent_60%)]"
+      className="py-20 bg-white dark:bg-[#120909]"
     >
       <div className="mx-auto max-w-6xl px-7">
         <div className="max-w-2xl">
@@ -18,7 +18,7 @@ function Process() {
           </p>
         </div>
         <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          <div className="rounded-2xl bg-white/50 dark:bg-card/40 p-5 shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10 backdrop-blur-sm transition hover:bg-white dark:hover:bg-card/60">
+          <div className="rounded-2xl bg-gray-50 dark:bg-card/40 p-5 shadow-sm ring-1 ring-gray-900/5 dark:ring-white/10 backdrop-blur-sm transition hover:bg-white dark:hover:bg-card/60">
             <span className="mb-2 block font-display font-bold text-accent-bright text-xl">
               01
             </span>

@@ -15,7 +15,7 @@ function Testimonials() {
     ];
 
     return (
-        <section id="testimonials" className="py-20">
+        <section id="testimonials" className="py-20 bg-white dark:bg-[#120909]">
             <div className="mx-auto max-w-6xl px-7">
                 <div className="mb-12 max-w-2xl">
                     <p className="mb-3 text-xs uppercase tracking-[0.3em] text-accent-bright">
@@ -33,7 +33,7 @@ function Testimonials() {
                     {testimonials.map((item, idx) => (
                         <div
                             key={idx}
-                            className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-gray-200 dark:bg-card/40 dark:ring-white/10 backdrop-blur-sm"
+                            className="rounded-3xl bg-white dark:bg-[#181818] p-8 border border-gray-200 dark:border-[#222] transition hover:shadow-lg dark:hover:shadow-none"
                         >
                             <div className="mb-6">
                                 {[...Array(5)].map((_, i) => (

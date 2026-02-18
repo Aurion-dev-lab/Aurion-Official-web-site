@@ -28,7 +28,7 @@ function Header() {
 				<div className="flex items-center gap-4">
 					<ThemeToggle />
 					<Link
-						className="rounded-full bg-gradient-to-r from-accent to-accent-bright px-6 py-2.5 text-sm font-semibold text-[#0c0605] shadow-ember transition hover:-translate-y-0.5"
+						className="rounded-full bg-gradient-to-r from-accent to-accent-bright px-6 py-2.5 text-sm font-semibold text-[#0c0605] transition hover:-translate-y-0.5"
 						to="/contact"
 					>
 						Request Demo

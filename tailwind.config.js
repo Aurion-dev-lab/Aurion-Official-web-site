@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        base: '#0a0504',
+        base: '#120909',
         surface: '#120806',
         card: '#160a08',
         accent: '#ff4c25',
@@ -15,15 +15,12 @@ export default {
         muted: '#c9bab4',
       },
       backgroundImage: {
-        'dark-gradient': 'radial-gradient(circle at top left, rgba(255,76,37,0.2), transparent 45%), radial-gradient(circle at 80% 20%, rgba(255,122,64,0.15), transparent 40%), linear-gradient(to bottom, #0a0504, #0a0504)',
-        'base-gradient': 'radial-gradient(circle at top left, rgba(255,76,37,0.25), transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,122,64,0.2), transparent 40%), #0a0504',
       },
       fontFamily: {
         sans: ['Manrope', 'sans-serif'],
         display: ['Space Grotesk', 'sans-serif']
       },
       boxShadow: {
-        ember: '0 12px 30px rgba(255, 76, 37, 0.25)',
         card: '0 20px 50px rgba(0, 0, 0, 0.35)',
         deep: '0 30px 60px rgba(0, 0, 0, 0.4)'
       },

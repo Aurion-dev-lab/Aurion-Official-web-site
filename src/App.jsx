@@ -44,7 +44,7 @@ function ScrollToSection() {
 function App() {
   return (
     <div
-      className="min-h-screen overflow-hidden bg-white text-gray-900 dark:bg-base dark:bg-dark-gradient dark:text-text"
+      className="min-h-screen overflow-hidden bg-white text-gray-900 dark:bg-base dark:text-text"
     >
       <ScrollToSection />
 
