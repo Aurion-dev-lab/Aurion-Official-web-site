@@ -1,10 +1,10 @@
 function Footer() {
 	return (
-		<footer className="border-t border-gray-200 bg-gray-50 py-16 dark:border-white/5 dark:bg-[#0b0605]">
+		<footer className="border-t border-gray-200 bg-gray-50 py-16 dark:border-white/5 dark:bg-[#0b0b0d]">
 			<div className="mx-auto grid max-w-6xl gap-10 px-7 sm:grid-cols-2 lg:grid-cols-3">
 				<div className="space-y-4">
 					<div className="flex items-center gap-3">
-						<span className="h-8 w-8 rounded-full bg-[radial-gradient(circle_at_30%_30%,#ffd4b5,#ff4c25)]" />
+						<span className="h-8 w-8 rounded-full bg-[radial-gradient(circle_at_30%_30%,#f09090,#e03e3e)]" />
 						<p className="font-display text-xl">AURION</p>
 					</div>
 					<p className="text-sm text-gray-600 dark:text-muted">

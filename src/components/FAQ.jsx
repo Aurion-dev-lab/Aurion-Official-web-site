@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import { FiPlus, FiMinus } from 'react-icons/fi';
 
+
 function FAQ() {
+
+
     const faqs = [
         {
             question: "What technologies do you use for full-stack web development?",
@@ -32,7 +35,7 @@ function FAQ() {
     };
 
     return (
-        <section id="faq" className="py-20 bg-gray-50 dark:bg-white/5">
+        <section id="faq" className="py-20 bg-white dark:bg-[#0c0c0e]">
             <div className="mx-auto max-w-4xl px-7">
                 <div className="mb-12 text-center">
                     <p className="mb-3 text-xs uppercase tracking-[0.3em] text-accent-bright">
@@ -50,22 +53,22 @@ function FAQ() {
                     {faqs.map((faq, index) => (
                         <div
                             key={index}
-                            className={`overflow-hidden rounded-2xl bg-white transition-all dark:bg-card/40 ring-1 ring-gray-200 dark:ring-white/10 ${openIndex === index ? 'shadow-md dark:shadow-none' : 'shadow-sm'
+                            className={`overflow-hidden rounded-2xl bg-white transition-all duration-300 dark:bg-[#0c0c0e] ring-1 ring-gray-200 dark:ring-white/10 hover:ring-accent-bright/30 ${openIndex === index ? 'shadow-md dark:shadow-[0_4px_20px_rgba(224,62,62,0.06)]' : 'shadow-sm'
                                 }`}
                         >
                             <button
                                 onClick={() => toggleFAQ(index)}
-                                className="flex w-full items-center justify-between p-6 text-left focus:outline-none"
+                                className="flex w-full items-center justify-between p-6 text-left focus:outline-none group"
                             >
-                                <span className="font-display text-lg font-semibold text-gray-900 dark:text-text">
+                                <span className="font-display text-lg font-semibold text-gray-900 dark:text-text transition-colors group-hover:text-accent-bright">
                                     {faq.question}
                                 </span>
-                                <span className="ml-4 text-accent-bright">
+                                <span className={`ml-4 text-accent-bright transition-transform duration-300 ${openIndex === index ? 'rotate-180' : 'rotate-0'}`}>
                                     {openIndex === index ? <FiMinus size={24} /> : <FiPlus size={24} />}
                                 </span>
                             </button>
                             <div
-                                className={`transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                                className={`transition-all duration-400 ease-out ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                                     }`}
                             >
                                 <div className="px-6 pb-6 text-gray-600 dark:text-muted leading-relaxed border-t border-gray-100 dark:border-white/5 pt-4">

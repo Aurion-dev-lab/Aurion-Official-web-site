@@ -1,11 +1,15 @@
 // This form uses FormSubmit (https://formsubmit.co) for submissions.
 // Replace 'your@email.com' in the action URL with your actual email address to receive form responses.
+import useScrollReveal from '../hooks/useScrollReveal';
+
 function Contact() {
+	const sectionRef = useScrollReveal();
+
 	return (
-		<section id="contact" className="py-20">
+		<section ref={sectionRef} id="contact" className="py-20 bg-white dark:bg-[#0c0c0e]">
 			<div className="mx-auto max-w-6xl px-7">
-				<div className="grid gap-8 rounded-3xl border border-gray-200 bg-white p-8 shadow-lg dark:border-white/10 dark:bg-card dark:shadow-deep md:grid-cols-2">
-					<div>
+				<div className="grid gap-8 rounded-3xl border border-gray-200 bg-white p-8 shadow-lg dark:border-white/10 dark:bg-[#0c0c0e] dark:shadow-deep md:grid-cols-2">
+					<div className="reveal-fade-left">
 						<p className="mb-3 text-xs uppercase tracking-[0.3em] text-accent-bright">Request a demo</p>
 						<h2 className="mb-4 font-display text-[clamp(2rem,4vw,3.2rem)] text-gray-900 dark:text-text">
 							Elevate your business with expert IT services
@@ -30,7 +34,7 @@ function Contact() {
 						</div>
 					</div>
 					<form
-						className="grid gap-4"
+						className="reveal-fade-right grid gap-4"
 						aria-label="Demo request"
 						action="https://formsubmit.co/AurionIT@outlook.com"
 						method="POST"
@@ -42,7 +46,7 @@ function Contact() {
 								name="name"
 								placeholder="Jane Doe"
 								required
-								className="rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-accent-bright/60 focus:outline-none focus:ring-2 focus:ring-accent-bright/15 dark:border-white/10 dark:bg-[#0f0807] dark:text-text dark:placeholder:text-muted/70"
+								className="rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder:text-gray-400 transition-all duration-300 focus:border-accent-bright/60 focus:outline-none focus:ring-2 focus:ring-accent-bright/15 focus:shadow-[0_0_15px_rgba(224,62,62,0.1)] dark:border-white/10 dark:bg-[#111113] dark:text-text dark:placeholder:text-muted/70"
 							/>
 						</label>
 						<label className="grid gap-2 text-sm text-gray-600 dark:text-muted">
@@ -52,14 +56,14 @@ function Contact() {
 								name="email"
 								placeholder="jane@company.com"
 								required
-								className="rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-accent-bright/60 focus:outline-none focus:ring-2 focus:ring-accent-bright/15 dark:border-white/10 dark:bg-[#0f0807] dark:text-text dark:placeholder:text-muted/70"
+								className="rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder:text-gray-400 transition-all duration-300 focus:border-accent-bright/60 focus:outline-none focus:ring-2 focus:ring-accent-bright/15 focus:shadow-[0_0_15px_rgba(224,62,62,0.1)] dark:border-white/10 dark:bg-[#111113] dark:text-text dark:placeholder:text-muted/70"
 							/>
 						</label>
 						<label className="grid gap-2 text-sm text-gray-600 dark:text-muted">
 							Service
 							<select
 								name="service"
-								className="rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 focus:border-accent-bright/60 focus:outline-none focus:ring-2 focus:ring-accent-bright/15 dark:border-white/10 dark:bg-[#0f0807] dark:text-text"
+								className="rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 transition-all duration-300 focus:border-accent-bright/60 focus:outline-none focus:ring-2 focus:ring-accent-bright/15 focus:shadow-[0_0_15px_rgba(224,62,62,0.1)] dark:border-white/10 dark:bg-[#111113] dark:text-text"
 								defaultValue=""
 							>
 								<option value="" disabled>Select a service</option>
@@ -79,14 +83,14 @@ function Contact() {
 								name="project_goals"
 								placeholder="Tell us what you want to improve"
 								rows="4"
-								className="rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-accent-bright/60 focus:outline-none focus:ring-2 focus:ring-accent-bright/15 dark:border-white/10 dark:bg-[#0f0807] dark:text-text dark:placeholder:text-muted/70"
+								className="rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder:text-gray-400 transition-all duration-300 focus:border-accent-bright/60 focus:outline-none focus:ring-2 focus:ring-accent-bright/15 focus:shadow-[0_0_15px_rgba(224,62,62,0.1)] dark:border-white/10 dark:bg-[#111113] dark:text-text dark:placeholder:text-muted/70"
 							/>
 						</label>
 						<p className="text-xs text-gray-500 dark:text-muted">
 							Share any deadlines, compliance requirements, or cloud providers you use.
 						</p>
 						<button
-							className="rounded-full bg-gradient-to-r from-accent to-accent-bright px-6 py-3 text-sm font-semibold text-[#0c0605] transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/70 focus-visible:ring-offset-2 focus-visible:ring-offset-base"
+							className="glow-pulse rounded-full bg-gradient-to-r from-accent to-accent-bright px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-bright/70 focus-visible:ring-offset-2 focus-visible:ring-offset-base"
 							type="submit"
 						>
 							Send request

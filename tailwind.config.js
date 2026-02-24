@@ -5,14 +5,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        base: '#120909',
-        surface: '#120806',
-        card: '#160a08',
-        accent: '#ff4c25',
-        'accent-bright': '#ff6a3d',
-        'accent-deep': '#d7381d',
-        text: '#f5f0ee',
-        muted: '#c9bab4',
+        base: '#0c0c0e',
+        surface: '#0e0e10',
+        card: '#141416',
+        accent: '#e03e3e',
+        'accent-bright': '#f25555',
+        'accent-deep': '#b52d2d',
+        text: '#f0f0f2',
+        muted: '#a0a0a8',
       },
       backgroundImage: {
       },
@@ -53,7 +53,10 @@ export default {
         pulse: 'pulse 4s ease-in-out infinite',
         drift: 'drift 8s ease-in-out infinite',
         flicker: 'flicker 3.5s ease-in-out infinite',
-        rise: 'rise 4s ease-in-out infinite'
+        rise: 'rise 4s ease-in-out infinite',
+      },
+      transitionTimingFunction: {
+        'out-expo': 'cubic-bezier(0.16, 1, 0.3, 1)',
       }
     }
   },
