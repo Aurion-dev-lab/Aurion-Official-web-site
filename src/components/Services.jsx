@@ -8,7 +8,7 @@ function Services() {
 		{ title: 'Mobile Apps', desc: 'Expert Flutter & native development consulting, offline-first strategies.' },
 		{ title: 'DevOps & Cloud', desc: 'Streamlined DevOps, Docker containerization, and automated CI/CD pipelines.' },
 		{ title: 'UI/UX Design', desc: 'User-centric wireframing, high-fidelity UI design, and seamless handoff.' },
-		{ title: 'Project Consulting', desc: 'Strategic scoping, risk assessment, and expert delivery oversight.' },
+		{ title: 'IT Consulting', desc: 'Expert technology guidance for businesses and students — from strategic planning to hands-on technical mentorship.' },
 		{ title: 'Machine Learning', desc: 'Advanced ML modeling, robust data pipelines, and predictive analytics services.' },
 		{ title: 'Portfolio Websites', desc: 'Professional branding, creative portfolios, and digital presence services.' },
 		{ title: 'Automation Solutions', desc: 'Custom workflow automation, scripting, and business process optimization.' },

@@ -1,43 +1,54 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 /**
- * Custom hook that uses Intersection Observer to reveal elements on scroll.
- * Adds a 'revealed' class when elements enter the viewport.
- * 
+ * Custom hook for scroll-based reveal animations.
+ * Adds and removes 'revealed' class based on visibility.
+ *
  * @param {Object} options
- * @param {number} options.threshold - Visibility threshold (0–1), default 0.15
- * @param {string} options.rootMargin - Root margin, default '0px 0px -60px 0px'
+ * @param {number} options.threshold - Visibility threshold (0–1)
+ * @param {string} options.rootMargin - Root margin
  */
-export default function useScrollReveal({ threshold = 0.15, rootMargin = '0px 0px -60px 0px' } = {}) {
-    const ref = useRef(null);
+export default function useScrollReveal({
+  threshold = 0.1,
+  rootMargin = "0px 0px -100px 0px",
+} = {}) {
+  const ref = useRef(null);
 
-    useEffect(() => {
-        const node = ref.current;
-        if (!node) return;
+  useEffect(() => {
+    const container = ref.current;
+    if (!container) return;
 
-        // Collect all elements with a reveal class inside the container
-        const targets = node.querySelectorAll(
-            '.reveal-fade-up, .reveal-fade-left, .reveal-fade-right, .reveal-scale, .reveal-blur'
-        );
+    const targets = container.querySelectorAll(`
+      .reveal-fade-up,
+      .reveal-fade-left,
+      .reveal-fade-right,
+      .reveal-scale,
+      .reveal-blur,
+      .reveal-rotate,
+      .reveal-flip,
+      .reveal-parallax
+    `);
 
-        if (targets.length === 0) return;
+    if (!targets.length) return;
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('revealed');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            },
-            { threshold, rootMargin }
-        );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+          } else {
+            // 👇 This enables re-animation when scrolling up
+            entry.target.classList.remove("revealed");
+          }
+        });
+      },
+      { threshold, rootMargin }
+    );
 
-        targets.forEach((el) => observer.observe(el));
+    targets.forEach((el) => observer.observe(el));
 
-        return () => observer.disconnect();
-    }, [threshold, rootMargin]);
+    return () => observer.disconnect();
+  }, [threshold, rootMargin]);
 
-    return ref;
+  return ref;
 }
