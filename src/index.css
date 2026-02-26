@@ -4,267 +4,125 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ================= BASE ================= */
+
 @layer base {
-    body {
-        @apply bg-white text-gray-900 dark:bg-base dark:text-text;
-    }
+  body {
+    @apply bg-white text-gray-900 dark:bg-base dark:text-text;
+  }
 }
 
-/* ═══════════════════════════════════════════
-   SCROLL-REVEAL ANIMATION SYSTEM
-   ═══════════════════════════════════════════ */
+/* ================= REVEAL SYSTEM (SLOWER PREMIUM) ================= */
 
-/* --- Fade Up --- */
-.reveal-fade-up {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+.reveal {
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+              filter 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
 }
 
-.reveal-fade-up.revealed {
-    opacity: 1;
-    transform: translateY(0);
+/* Fade Up */
+.reveal-fade-up { transform: translateY(60px); }
+.reveal-fade-up.revealed { opacity: 1; transform: translateY(0); }
+
+/* Fade Left */
+.reveal-fade-left { transform: translateX(-70px); }
+.reveal-fade-left.revealed { opacity: 1; transform: translateX(0); }
+
+/* Fade Right */
+.reveal-fade-right { transform: translateX(70px); }
+.reveal-fade-right.revealed { opacity: 1; transform: translateX(0); }
+
+/* Scale */
+.reveal-scale { transform: scale(0.85); }
+.reveal-scale.revealed { opacity: 1; transform: scale(1); }
+
+/* Blur */
+.reveal-blur { filter: blur(12px); transform: translateY(40px); }
+.reveal-blur.revealed { opacity: 1; filter: blur(0); transform: translateY(0); }
+
+/* Rotate */
+.reveal-rotate { transform: rotate(-12deg) scale(0.9); }
+.reveal-rotate.revealed { opacity: 1; transform: rotate(0) scale(1); }
+
+/* Flip */
+.reveal-flip {
+  transform: rotateX(110deg);
+  transform-origin: top;
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 1.2s ease;
+}
+.reveal-flip.revealed {
+  opacity: 1;
+  transform: rotateX(0deg);
 }
 
-/* --- Fade Left --- */
-.reveal-fade-left {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+/* Parallax */
+.reveal-parallax {
+  transform: translateY(120px) scale(1.1);
+  transition: all 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-parallax.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
-.reveal-fade-left.revealed {
-    opacity: 1;
-    transform: translateX(0);
-}
+/* ================= STAGGER ================= */
 
-/* --- Fade Right --- */
-.reveal-fade-right {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
+.stagger-1 { transition-delay: 0.15s; }
+.stagger-2 { transition-delay: 0.30s; }
+.stagger-3 { transition-delay: 0.45s; }
+.stagger-4 { transition-delay: 0.60s; }
+.stagger-5 { transition-delay: 0.75s; }
+.stagger-6 { transition-delay: 0.90s; }
 
-.reveal-fade-right.revealed {
-    opacity: 1;
-    transform: translateX(0);
-}
+/* ================= HERO WIPE ================= */
 
-/* --- Scale In --- */
-.reveal-scale {
-    opacity: 0;
-    transform: scale(0.88);
-    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal-scale.revealed {
-    opacity: 1;
-    transform: scale(1);
-}
-
-/* --- Blur In (Headings) --- */
-.reveal-blur {
-    opacity: 0;
-    filter: blur(8px);
-    transform: translateY(20px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-        filter 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal-blur.revealed {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(0);
-}
-
-/* ═══════════════════════════════════════════
-   STAGGER DELAY CLASSES
-   ═══════════════════════════════════════════ */
-.stagger-1 {
-    transition-delay: 0.08s;
-}
-
-.stagger-2 {
-    transition-delay: 0.16s;
-}
-
-.stagger-3 {
-    transition-delay: 0.24s;
-}
-
-.stagger-4 {
-    transition-delay: 0.32s;
-}
-
-.stagger-5 {
-    transition-delay: 0.40s;
-}
-
-.stagger-6 {
-    transition-delay: 0.48s;
-}
-
-.stagger-7 {
-    transition-delay: 0.56s;
-}
-
-.stagger-8 {
-    transition-delay: 0.64s;
-}
-
-.stagger-9 {
-    transition-delay: 0.72s;
-}
-
-/* ═══════════════════════════════════════════
-   HERO TEXT REVEAL (Clip-path wipe)
-   ═══════════════════════════════════════════ */
 @keyframes heroTextReveal {
-    0% {
-        clip-path: inset(0 100% 0 0);
-        opacity: 0;
-    }
-
-    100% {
-        clip-path: inset(0 0 0 0);
-        opacity: 1;
-    }
+  0% { clip-path: inset(0 100% 0 0); opacity: 0; }
+  100% { clip-path: inset(0 0 0 0); opacity: 1; }
 }
 
 .hero-text-reveal {
-    animation: heroTextReveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+  animation: heroTextReveal 1.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-/* ═══════════════════════════════════════════
-   GLOW PULSE (accent elements)
-   ═══════════════════════════════════════════ */
+/* ================= GLOW ================= */
+
 @keyframes glowPulse {
-
-    0%,
-    100% {
-        box-shadow: 0 0 8px rgba(224, 62, 62, 0.3);
-    }
-
-    50% {
-        box-shadow: 0 0 22px rgba(224, 62, 62, 0.55), 0 0 40px rgba(224, 62, 62, 0.15);
-    }
+  0%,100% { box-shadow: 0 0 8px rgba(224,62,62,0.3); }
+  50% { box-shadow: 0 0 30px rgba(224,62,62,0.55); }
 }
 
 .glow-pulse {
-    animation: glowPulse 2.5s ease-in-out infinite;
+  animation: glowPulse 3.5s ease-in-out infinite;
 }
 
-/* ═══════════════════════════════════════════
-   SHIMMER (stars, accents)
-   ═══════════════════════════════════════════ */
-@keyframes shimmer {
-    0% {
-        opacity: 0.5;
-        transform: scale(0.9);
-    }
+/* ================= SCROLL PROGRESS ================= */
 
-    50% {
-        opacity: 1;
-        transform: scale(1.15);
-    }
-
-    100% {
-        opacity: 0.5;
-        transform: scale(0.9);
-    }
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #e03e3e;
+  width: 0%;
+  z-index: 9999;
 }
 
-.star-shimmer {
-    display: inline-block;
-    animation: shimmer 1.8s ease-in-out infinite;
-}
+/* ================= REDUCED MOTION ================= */
 
-.star-shimmer:nth-child(2) {
-    animation-delay: 0.15s;
-}
-
-.star-shimmer:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.star-shimmer:nth-child(4) {
-    animation-delay: 0.45s;
-}
-
-.star-shimmer:nth-child(5) {
-    animation-delay: 0.6s;
-}
-
-/* ═══════════════════════════════════════════
-   HEADER SLIDE DOWN
-   ═══════════════════════════════════════════ */
-@keyframes slideDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-slide-down {
-    animation: slideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-/* ═══════════════════════════════════════════
-   COUNTER / NUMBER POP
-   ═══════════════════════════════════════════ */
-@keyframes numberPop {
-    0% {
-        opacity: 0;
-        transform: scale(0.5) translateY(10px);
-    }
-
-    60% {
-        opacity: 1;
-        transform: scale(1.12) translateY(-2px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-
-.number-pop {
-    animation: numberPop 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-/* ═══════════════════════════════════════════
-   RESPECT REDUCED MOTION
-   ═══════════════════════════════════════════ */
 @media (prefers-reduced-motion: reduce) {
-
-    .reveal-fade-up,
-    .reveal-fade-left,
-    .reveal-fade-right,
-    .reveal-scale,
-    .reveal-blur {
-        opacity: 1 !important;
-        transform: none !important;
-        filter: none !important;
-        transition: none !important;
-    }
-
-    .hero-text-reveal,
-    .glow-pulse,
-    .star-shimmer,
-    .animate-slide-down,
-    .number-pop {
-        animation: none !important;
-        opacity: 1 !important;
-    }
+  .reveal,
+  .reveal-flip,
+  .reveal-parallax,
+  .hero-text-reveal,
+  .glow-pulse {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
 }
