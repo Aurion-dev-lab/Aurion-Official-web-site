@@ -10,6 +10,7 @@ import Testimonials from "./components/Testimonials.jsx";
 import FAQ from "./components/FAQ.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
+import FloatingContactIcons from "./components/FloatingContactIcons.jsx";
 
 function ScrollToSection() {
   const location = useLocation();
@@ -79,6 +80,8 @@ function App() {
           <Contact />
         </section>
       </main>
+
+      <FloatingContactIcons />
 
       <Footer />
     </div>

@@ -60,6 +60,15 @@ function Contact() {
 							/>
 						</label>
 						<label className="grid gap-2 text-sm text-gray-600 dark:text-muted">
+							Contact number
+							<input
+								type="tel"
+								name="contact_number"
+								placeholder="+94 77 123 4567"
+								className="rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder:text-gray-400 transition-all duration-300 focus:border-accent-bright/60 focus:outline-none focus:ring-2 focus:ring-accent-bright/15 focus:shadow-[0_0_15px_rgba(224,62,62,0.1)] dark:border-white/10 dark:bg-[#111113] dark:text-text dark:placeholder:text-muted/70"
+							/>
+						</label>
+						<label className="grid gap-2 text-sm text-gray-600 dark:text-muted">
 							Service
 							<select
 								name="service"

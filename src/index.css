@@ -7,6 +7,13 @@
 /* ================= BASE ================= */
 
 @layer base {
+  html,
+  body,
+  #root {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-white text-gray-900 dark:bg-base dark:text-text;
   }

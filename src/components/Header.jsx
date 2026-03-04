@@ -7,7 +7,7 @@ function Header() {
 	return (
 		<header className="sticky top-0 z-20 border-b border-gray-200 bg-white/80 backdrop-blur dark:border-white/5 dark:bg-[#0a0a0c]/80">
 			{/* Reduced py-5 to py-3 for a sleeker look with the larger logo */}
-			<div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-7 py-3">
+			<div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3 sm:gap-4 sm:px-7">
 
 				<Link to="/" className="flex items-center">
 					<img
@@ -25,13 +25,14 @@ function Header() {
 					<Link to="/process" className="transition hover:text-black dark:hover:text-text">Process</Link>
 				</nav>
 
-				<div className="flex items-center gap-4">
+				<div className="flex items-center gap-2 sm:gap-4">
 					<ThemeToggle />
 					<Link
-						className="rounded-full bg-gradient-to-r from-accent to-accent-bright px-6 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5"
+						className="whitespace-nowrap rounded-full bg-gradient-to-r from-accent to-accent-bright px-4 py-2 text-xs font-semibold text-white transition hover:-translate-y-0.5 sm:px-6 sm:py-2.5 sm:text-sm"
 						to="/contact"
 					>
-						Request Demo
+						<span className="sm:hidden">Demo</span>
+						<span className="hidden sm:inline">Request Demo</span>
 					</Link>
 				</div>
 			</div>
